@@ -5,6 +5,7 @@
 #include "In_Container.h"
 #include "Out_Container.h"
 #include "Clear_Container.h"
+#include "Out_Only_Fish.h"
 
 using namespace std;
 
@@ -27,6 +28,8 @@ int main(int argc, char* argv[])
     In(Head, ifst); //Записываем элементы контейнера из файла input.txt
     ofst << "Filled container. " << endl;
     Out(Head, ofst); //Выводим элементы контейнера в файл output.txt
+
+    Out_Only_Fish(Head, ofst); //Выводим только рыб
 
     Head = Clear(Head); //Очищаем контейнер
     ofst << "Empty container. " << endl;

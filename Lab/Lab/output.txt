@@ -6,5 +6,11 @@ Fish's habitat is River
 Is it a migration bird: Yes
 2: It's a Fish: Fish2
 Fish's habitat is Ocean
+
+Only Fishes.
+0: It's a Fish: Fish1
+Fish's habitat is River
+2: It's a Fish: Fish2
+Fish's habitat is Ocean
 Empty container. 
 Container contains 0 elements.

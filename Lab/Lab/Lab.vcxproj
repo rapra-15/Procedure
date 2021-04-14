@@ -150,6 +150,7 @@
     <ClCompile Include="Out_Bird.cpp" />
     <ClCompile Include="Out_Container.cpp" />
     <ClCompile Include="Out_Fish.cpp" />
+    <ClCompile Include="Out_Only_Fish.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
@@ -167,6 +168,7 @@
     <ClInclude Include="Out_Bird.h" />
     <ClInclude Include="Out_Container.h" />
     <ClInclude Include="Out_Fish.h" />
+    <ClInclude Include="Out_Only_Fish.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
