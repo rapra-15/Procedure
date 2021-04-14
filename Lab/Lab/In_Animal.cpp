@@ -16,6 +16,7 @@ Animal* In_Animal(ifstream& ifst) {
         An->Obj = In_Fish(ifst); //Считываем информацию о рыбе
         Fish* Temp_F = (Fish*)An->Obj; //Получаем данные о рыбе
         An->Name = Temp_F->Name; //Записываем в общий параметр название
+        An->Age = Temp_F->Age;
         return An;
     }
     else if (K == 2) //Если K == 2, то это птица
@@ -24,6 +25,7 @@ Animal* In_Animal(ifstream& ifst) {
         An->Obj = In_Bird(ifst); //Считываем информацию о птице
         Bird* Temb_B = (Bird*)An->Obj; //Получаем информацию о птице
         An->Name = Temb_B->Name; //Записываем в общий параметр название
+        An->Age = Temb_B->Age;
         return An;
     }
     else if (K == 3)

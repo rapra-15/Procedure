@@ -19,6 +19,7 @@ struct Fish {
     };
 
     Habitat H;
+    int Age; //Возраст рыбы
 };
 
 #endif // FISH_H

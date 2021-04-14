@@ -24,5 +24,7 @@ void* In_Fish(ifstream& ifst) {
         F->H = Fish::OCEAN;
     }
 
+    ifst >> F->Age;
+
     return F;
 }
