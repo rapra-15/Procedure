@@ -34,6 +34,7 @@ Animal* In_Animal(ifstream& ifst) {
         An->Obj = In_Beast(ifst);
         Beast* Temp_B = (Beast*)An->Obj;
         An->Name = Temp_B->Name;
+        An->Age = Temp_B->Age;
         return An;
     }
     else

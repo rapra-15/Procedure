@@ -24,5 +24,7 @@ void* In_Beast(ifstream& ifst) {
         B->B_T = Beast::INSECTIVOROUS;
     }
 
+    ifst >> B->Age;
+
     return B;
 }

@@ -17,4 +17,6 @@ void Out_Beast(Beast* B, ofstream& ofst) {
     {
         ofst << "Insectivorous" << endl;
     }
+
+    ofst << "Beast's age is " << B->Age << endl;
 }

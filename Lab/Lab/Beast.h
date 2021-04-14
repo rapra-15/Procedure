@@ -18,6 +18,7 @@ struct Beast {
     };
 
     Beast_Type B_T;
+    int Age;
 };
 
 #endif // BEAST_H
