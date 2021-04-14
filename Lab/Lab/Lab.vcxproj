@@ -142,6 +142,7 @@
     <ClCompile Include="Amount.cpp" />
     <ClCompile Include="Amount_Animal.cpp" />
     <ClCompile Include="Clear_Container.cpp" />
+    <ClCompile Include="Compare.cpp" />
     <ClCompile Include="Init_Container.cpp" />
     <ClCompile Include="In_Animal.cpp" />
     <ClCompile Include="In_Bird.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="Out_Bird.cpp" />
     <ClCompile Include="Out_Container.cpp" />
     <ClCompile Include="Out_Fish.cpp" />
+    <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Amount.h" />
@@ -159,6 +161,7 @@
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Clear_Container.h" />
+    <ClInclude Include="Compare.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="Fish.h" />
     <ClInclude Include="Init_Container.h" />
@@ -171,6 +174,7 @@
     <ClInclude Include="Out_Bird.h" />
     <ClInclude Include="Out_Container.h" />
     <ClInclude Include="Out_Fish.h" />
+    <ClInclude Include="Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
