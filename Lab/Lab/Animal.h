@@ -13,6 +13,7 @@ struct Animal {
     Key K;
     string Name; //Общий параметр - название животного
     void* Obj;
+    int Age; //Возраст животного
 };
 
 #endif // ANIMAL_H

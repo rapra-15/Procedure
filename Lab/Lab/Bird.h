@@ -10,6 +10,7 @@ using namespace std;
 struct Bird {
     string Name; //Название птицы
     bool Migration; //Мигрирует ли она
+    int Age; //Возраст птицы
 };
 
 #endif // BIRD_H

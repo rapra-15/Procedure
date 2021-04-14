@@ -2,9 +2,12 @@ Filled container.
 Container contains 3 elements.
 0: It's a Fish: Fish1
 Fish's habitat is River
+Fish's age is 7
 1: It's a Bird: Bird1
 Is it a migration bird: Yes
+Bird's age is 13
 2: It's a Fish: Fish2
 Fish's habitat is Ocean
+Fish's age is 4
 Empty container. 
 Container contains 0 elements.

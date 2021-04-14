@@ -1,9 +1,12 @@
 1
 Fish1
 River
+7
 2
 Bird1
 1
+13
 1
 Fish2
 Ocean
+4

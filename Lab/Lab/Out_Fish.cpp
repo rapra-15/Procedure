@@ -18,4 +18,6 @@ void Out_Fish(Fish* F, ofstream& ofst) {
     {
         ofst << "Ocean" << endl;
     }
+
+    ofst << "Fish's age is " << F->Age << endl;
 }

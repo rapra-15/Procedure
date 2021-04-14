@@ -6,6 +6,7 @@ void* In_Bird(ifstream& ifst) {
 
     ifst >> B->Name; //—читывает название птицы
     ifst >> B->Migration; //—читываем информацию о том, мигрирует ли она
+    ifst >> B->Age;
 
     return B;
 }

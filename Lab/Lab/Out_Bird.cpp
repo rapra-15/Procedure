@@ -14,4 +14,6 @@ void Out_Bird(Bird* B, ofstream& ofst) {
     {
         ofst << "No" << endl;
     }
+
+    ofst << "Bird's age is " << B->Age << endl;
 }
