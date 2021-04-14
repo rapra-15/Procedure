@@ -1,4 +1,6 @@
-﻿  Clear_Container.cpp
+﻿  Amount.cpp
+  Amount_Animal.cpp
+  Clear_Container.cpp
   Init_Container.cpp
   In_Animal.cpp
   In_Bird.cpp

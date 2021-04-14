@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Amount.cpp" />
+    <ClCompile Include="Amount_Animal.cpp" />
     <ClCompile Include="Clear_Container.cpp" />
     <ClCompile Include="Init_Container.cpp" />
     <ClCompile Include="In_Animal.cpp" />
@@ -152,6 +154,8 @@
     <ClCompile Include="Out_Fish.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Amount.h" />
+    <ClInclude Include="Amount_Animal.h" />
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Clear_Container.h" />

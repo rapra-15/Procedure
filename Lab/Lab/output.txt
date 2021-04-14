@@ -2,9 +2,12 @@ Filled container.
 Container contains 3 elements.
 0: It's a Fish: Fish1
 Fish's habitat is River
+Amount of symbols in the name of animal = 5
 1: It's a Bird: Bird1
 Is it a migration bird: Yes
+Amount of symbols in the name of animal = 5
 2: It's a Fish: Fish2
 Fish's habitat is Ocean
+Amount of symbols in the name of animal = 5
 Empty container. 
 Container contains 0 elements.
