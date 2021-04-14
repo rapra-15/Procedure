@@ -4,7 +4,8 @@
 //Идентификатор животного
 enum Key {
     FISH,
-    BIRD
+    BIRD,
+    BEAST
 };
 
 #endif // KEY_H

@@ -142,28 +142,33 @@
     <ClCompile Include="Clear_Container.cpp" />
     <ClCompile Include="Init_Container.cpp" />
     <ClCompile Include="In_Animal.cpp" />
+    <ClCompile Include="In_Beast.cpp" />
     <ClCompile Include="In_Bird.cpp" />
     <ClCompile Include="In_Container.cpp" />
     <ClCompile Include="In_Fish.cpp" />
     <ClCompile Include="Lab.cpp" />
     <ClCompile Include="Out_Animal.cpp" />
+    <ClCompile Include="Out_Beast.cpp" />
     <ClCompile Include="Out_Bird.cpp" />
     <ClCompile Include="Out_Container.cpp" />
     <ClCompile Include="Out_Fish.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
+    <ClInclude Include="Beast.h" />
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Clear_Container.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="Fish.h" />
     <ClInclude Include="Init_Container.h" />
     <ClInclude Include="In_Animal.h" />
+    <ClInclude Include="In_Beast.h" />
     <ClInclude Include="In_Bird.h" />
     <ClInclude Include="In_Container.h" />
     <ClInclude Include="In_Fish.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Out_Animal.h" />
+    <ClInclude Include="Out_Beast.h" />
     <ClInclude Include="Out_Bird.h" />
     <ClInclude Include="Out_Container.h" />
     <ClInclude Include="Out_Fish.h" />

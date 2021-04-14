@@ -7,3 +7,6 @@ Bird1
 1
 Fish2
 Ocean
+3
+Beast1
+Insectivorous

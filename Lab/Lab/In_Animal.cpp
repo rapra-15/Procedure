@@ -1,8 +1,10 @@
 #include "Fish.h"
 #include "Bird.h"
+#include "Beast.h"
 #include "In_Animal.h"
 #include "In_Fish.h"
 #include "In_Bird.h"
+#include "In_Beast.h"
 
 Animal* In_Animal(ifstream& ifst) {
     Animal *An = new Animal; //Выделяем память под новое животное
@@ -22,6 +24,14 @@ Animal* In_Animal(ifstream& ifst) {
         An->Obj = In_Bird(ifst); //Считываем информацию о птице
         Bird* Temb_B = (Bird*)An->Obj; //Получаем информацию о птице
         An->Name = Temb_B->Name; //Записываем в общий параметр название
+        return An;
+    }
+    else if (K == 3)
+    {
+        An->K = BEAST;
+        An->Obj = In_Beast(ifst);
+        Beast* Temp_B = (Beast*)An->Obj;
+        An->Name = Temp_B->Name;
         return An;
     }
     else
