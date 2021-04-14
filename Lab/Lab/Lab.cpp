@@ -6,6 +6,7 @@
 #include "Out_Container.h"
 #include "Clear_Container.h"
 #include "Sort.h"
+#include "Out_Only_Fish.h"
 
 using namespace std;
 
@@ -31,6 +32,8 @@ int main(int argc, char* argv[])
     Sort(Head);
 
     Out(Head, ofst); //Выводим элементы контейнера в файл output.txt
+
+    Out_Only_Fish(Head, ofst);
 
     Head = Clear(Head); //Очищаем контейнер
     ofst << "Empty container. " << endl;

@@ -28,5 +28,19 @@ Amount of symbols in the name of animal = 6
 Is it a migration bird: Yes
 Bird's age is 4
 Amount of symbols in the name of animal = 7
+
+Only Fishes.
+0: It's a Fish: Fish1
+Fish's habitat is River
+Fish's age is 7
+1: It's a Fish: Fish2
+Fish's habitat is Ocean
+Fish's age is 13
+2: It's a Fish: Fish3
+Fish's habitat is Sea
+Fish's age is 2
+3: It's a Fish: Fish27
+Fish's habitat is River
+Fish's age is 11
 Empty container. 
 Container contains 0 elements.

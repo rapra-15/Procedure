@@ -14,6 +14,7 @@
   Out_Bird.cpp
   Out_Container.cpp
   Out_Fish.cpp
+  Out_Only_Fish.cpp
   Sort.cpp
   Создание кода...
   Lab.vcxproj -> C:\Users\of913\OneDrive\Документы\GitHub\Procedure\Lab\Debug\Lab.exe
