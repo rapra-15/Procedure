@@ -4,11 +4,13 @@
   Compare.cpp
   Init_Container.cpp
   In_Animal.cpp
+  In_Beast.cpp
   In_Bird.cpp
   In_Container.cpp
   In_Fish.cpp
   Lab.cpp
   Out_Animal.cpp
+  Out_Beast.cpp
   Out_Bird.cpp
   Out_Container.cpp
   Out_Fish.cpp

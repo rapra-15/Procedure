@@ -48,16 +48,10 @@
     <ClCompile Include="Out_Fish.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Amount.cpp">
+    <ClCompile Include="In_Beast.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Amount_Animal.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="Compare.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="Sort.cpp">
+    <ClCompile Include="Out_Beast.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,16 +101,13 @@
     <ClInclude Include="Out_Fish.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Amount.h">
+    <ClInclude Include="Beast.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Amount_Animal.h">
+    <ClInclude Include="In_Beast.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Compare.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Sort.h">
+    <ClInclude Include="Out_Beast.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
