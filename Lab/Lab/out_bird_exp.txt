@@ -1,5 +1,3 @@
-Container contains 1 elements.
-0: It's a Bird: Bird1
+It's a Bird: Bird1
 Is it a migration bird: Yes
 Bird's age is 7
-Amount of symbols in the name of animal = 5

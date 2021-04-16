@@ -50,7 +50,7 @@ namespace UnitTest
 	{
 	public:
 		
-		TEST_METHOD(In_Fish_Test) //Тест проверки ввода информации (к примеру, о рыбах)
+		TEST_METHOD(In_Fish_Test) //Тест проверки ввода информации о рыбе
 		{
 			Fish* F_exp = new Fish; //Выделяем память для рыбы,
 									//exp означает, что такую информацию
@@ -61,38 +61,80 @@ namespace UnitTest
 			F_exp->H = Fish::OCEAN;
 			F_exp->Age = 13;
 
-			//Выделяем память в контейнере
-			Container* Head_Exp = new Container();
-
-			//Заполняем все поля, которые будем сравнивать с тем, что находится в файле
-			Head_Exp->Cont = new Animal;
-			Head_Exp->Cont->Name = "Fish1";
-			Head_Exp->Cont->K = FISH;
-			Head_Exp->Cont->Obj = F_exp;
-			Head_Exp->Cont->Age = 13;
-			Head_Exp->Len = 1;
-			Head_Exp->Next = Head_Exp;
-
 			ifstream ifst("../Lab/in_fish.txt");
 
-			Container* Head_Act = new Container();
-
-			Head_Act = Init(Head_Act);
-
-			//Считываем то, что в файле
-			In(Head_Act, ifst);
-
-			//Записываем фактическую информацию, с ней будем сравнивать предполагаемую
-			Fish* F_act = (Fish*)Head_Act->Cont->Obj;
+			Fish* F_act = (Fish*)In_Fish(ifst);
 
 			//Сравниваем считанную (фактическую) и предполагаемой (описанной ранее) информацией о рыбе
-			Assert::AreEqual(Head_Exp->Len, Head_Act->Len);
-			Assert::AreEqual((int)Head_Exp->Cont->K, (int)Head_Act->Cont->K);
-			Assert::AreEqual((int)Head_Exp->Cont->Age, (int)Head_Act->Cont->Age);
-
 			Assert::AreEqual(F_exp->Name, F_act->Name);
 			Assert::AreEqual((int)F_exp->H, (int)F_act->H);
 			Assert::AreEqual((int)F_exp->Age, (int)F_act->Age);
+		}
+		TEST_METHOD(In_Bird_Test) //Тест проверки ввода информации о птице
+		{
+			Bird* B_exp = new Bird; //Выделяем память для птицы,
+									//exp означает, что такую информацию
+									//мы предполагаем увидеть после считывания
+
+			//Заполняем предполагаемые данные
+			B_exp->Name = "Bird13";
+			B_exp->Migration  = true;
+			B_exp->Age = 4;
+
+			ifstream ifst("../Lab/in_bird.txt");
+
+			Bird* B_act = (Bird*)In_Bird(ifst);
+
+			//Сравниваем считанную (фактическую) и предполагаемой (описанной ранее) информацией о птице
+			Assert::AreEqual(B_exp->Name, B_act->Name);
+			Assert::AreEqual(B_exp->Migration, B_act->Migration);
+			Assert::AreEqual(B_exp->Age, B_act->Age);
+		}
+		TEST_METHOD(In_Beast_Test) //Тест проверки ввода информации о звере
+		{
+			Beast* B_exp = new Beast; //Выделяем память для зверя,
+									//exp означает, что такую информацию
+									//мы предполагаем увидеть после считывания
+
+			//Заполняем предполагаемые данные
+			B_exp->Name = "Beast1";
+			B_exp->B_T = B_exp->INSECTIVOROUS;
+			B_exp->Age = 18;
+
+			ifstream ifst("../Lab/in_beast.txt");
+
+			Beast* B_act = (Beast*)In_Beast(ifst);
+
+			//Сравниваем считанную (фактическую) и предполагаемой (описанной ранее) информацией о рыбе
+			Assert::AreEqual(B_exp->Name, B_act->Name);
+			Assert::AreEqual((int)B_exp->B_T, (int)B_act->B_T);
+			Assert::AreEqual(B_exp->Age, B_act->Age);
+		}
+		TEST_METHOD(Out_Fish_Test)
+		{
+			//Описываем фактическую информацию о птице
+			Fish* F_act = new Fish;
+
+			F_act->Name = "Fish7";
+			F_act->H = F_act->RIVER;
+			F_act->Age = 11;
+
+			ofstream ofst("../Lab/out_fish_act.txt");
+
+			//Выводим указанную ранее информацию о рыбе
+			Out_Fish(F_act, ofst);
+
+			ifstream ifst_exp("../Lab/out_fish_exp.txt");
+			ifstream ifst_act("../Lab/out_fish_act.txt");
+
+			//Считываем то, что вывели, а также то, что предполагали увидеть при выводе
+			string Expected;
+			getline(ifst_exp, Expected, '\0');
+			string Actual;
+			getline(ifst_act, Actual, '\0');
+
+			//Сравниваем
+			Assert::AreEqual(Expected, Actual);
 		}
 		TEST_METHOD(Out_Bird_Test)
 		{
@@ -103,19 +145,10 @@ namespace UnitTest
 			B_act->Migration = true;
 			B_act->Age = 7;
 
-			Container* Head_Act = new Container();
-
-			Head_Act->Cont = new Animal;
-			Head_Act->Cont->Name = "Bird1";
-			Head_Act->Cont->K = BIRD;
-			Head_Act->Cont->Obj = B_act;
-			Head_Act->Len = 1;
-			Head_Act->Next = Head_Act;
-
 			ofstream ofst("../Lab/out_bird_act.txt");
 
 			//Выводим указанную ранее информацию о птице
-			Out(Head_Act, ofst);
+			Out_Bird(B_act, ofst);
 
 			ifstream ifst_exp("../Lab/out_bird_exp.txt");
 			ifstream ifst_act("../Lab/out_bird_act.txt");
@@ -129,39 +162,61 @@ namespace UnitTest
 			//Сравниваем
 			Assert::AreEqual(Expected, Actual);
 		}
+		TEST_METHOD(Out_Beast_Test)
+		{
+			//Описываем фактическую информацию о птице
+			Beast* B_act = new Beast;
+
+			B_act->Name = "Beast89";
+			B_act->B_T = B_act->PREDATOR;
+			B_act->Age = 23;
+
+			ofstream ofst("../Lab/out_beast_act.txt");
+
+			//Выводим указанную ранее информацию о звере
+			Out_Beast(B_act, ofst);
+
+			ifstream ifst_exp("../Lab/out_beast_exp.txt");
+			ifstream ifst_act("../Lab/out_beast_act.txt");
+
+			//Считываем то, что вывели, а также то, что предполагали увидеть при выводе
+			string Expected;
+			getline(ifst_exp, Expected, '\0');
+			string Actual;
+			getline(ifst_act, Actual, '\0');
+
+			//Сравниваем
+			Assert::AreEqual(Expected, Actual);
+		}
 		TEST_METHOD(Amount_Test)
 		{
-			Container* Head_Act = new Container();
+			Animal* An = new Animal;
+			
+			An->Name = "Beast12";
+			An->K = BEAST;
 
-			//Для теста функции подсчет достаточно указать имя животного
-			//и класс
-			Head_Act->Cont = new Animal;
-			Head_Act->Cont->Name = "Beast1";
-			Head_Act->Cont->K = BEAST;
-
-			int Sum_exp = 6;
-			int Sum_act = Amount_Animal(Head_Act->Cont);
+			int Sum_exp = 7;
+			int Sum_act = Amount_Animal(An);
 
 			Assert::AreEqual(Sum_exp, Sum_act);
 		}
 		TEST_METHOD(Compare_Test)
 		{
-			//Для функции сравнения описываем два класса животных
-			//и также указываем только имя и класс,
-			//больше информации нам не понадобится
-			Container* Head_B = new Container();
+			Container* Head_First = new Container();
+			Animal* An_First = new Animal;
 
-			Head_B->Cont = new Animal;
-			Head_B->Cont->Name = "Beast1";
-			Head_B->Cont->K = BEAST;
+			An_First->Name = "Beast1";
+			An_First->K = BEAST;
+			Head_First->Cont = An_First;
 
-			Container* Head_F = new Container();
+			Container* Head_Second = new Container();
+			Animal* An_Second = new Animal;
 
-			Head_F->Cont = new Animal;
-			Head_F->Cont->Name = "Fish1";
-			Head_F->Cont->K = FISH;
+			An_Second->Name = "Fish1";
+			An_Second->K = FISH;
+			Head_Second->Cont = An_Second;
 
-			bool Act = Compare(Head_B, Head_F);
+			bool Act = Compare(Head_First, Head_Second);
 			bool Exp = true;
 
 			Assert::AreEqual(Exp, Act);
